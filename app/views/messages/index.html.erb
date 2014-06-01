@@ -1,0 +1,15 @@
+<h1>Messages</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Timestamp</th>
+  </tr>
+<% @messages.each do |message| %>
+  <tr>
+    <td><%= link_to message.name, message_path(message) %></td>
+    <td><%= message.timestamp %></td>
+    <td><%= message.comment %></td>
+  </tr>
+<% end %>
+</table>

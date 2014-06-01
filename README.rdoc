@@ -1,0 +1,3 @@
+== README
+
+  MESSAGE_PATH=/path/to/project/tmp/messages rails s

@@ -1,0 +1,19 @@
+<h1><%= @message.name %></h1>
+
+<p>
+  <%= link_to "Back", messages_path %>
+</p>
+
+<%= form_for(:message, method: :put, url: "") do |f| %>
+  <%= f.text_field :comment %>
+  <%= f.submit "Update" %>
+<% end %>
+
+<h2>Client Issues This</h2>
+<pre><%= @message.incoming_request.header %></pre>
+<h2>Upstream Sees This</h2>
+<pre><%= @message.outgoing_request.header %></pre>
+<h2>Upstream Sent This Back</h2>
+<pre><%= @message.incoming_response.header %></pre>
+<h2>Client Gets This Back</h2>
+<pre><%= @message.outgoing_response.header %></pre>
